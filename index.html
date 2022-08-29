@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/1.2.2/jquery-jvectormap.css" rel="stylesheet" type="text/css" />
+        <link href="./icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="./css/app.min.css" rel="stylesheet" type="text/css" id="light-style" />
+        <script src="./js/vendor.min.js"></script>
+        <script src="./js/custom.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    </head>
+
+    <body class="show" data-layout="detached" data-layout-config="{&quot;leftSidebarCondensed&quot;:false,&quot;darkMode&quot;:false, &quot;showRightSidebarOnStart&quot;: true}" style="visibility: visible;">
+  
+        <div class="navbar-custom topnav-navbar topnav-navbar-dark">
+            <div class="container-fluid">
+
+
+                <ul class="list-unstyled topbar-menu float-end mb-0">
+                    <li class="notification-list">
+                        <a class="nav-link end-bar-toggle" href="javascript: void(0);">
+                            <i class="dripicons-gear noti-icon"></i>
+                        </a>
+                    </li>
+    
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" id="topbar-userdrop" href="#" role="button" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="account-user-avatar"> 
+                                <img src="{{avatar}}" alt="user-image" class="rounded-circle">
+                            </span>
+                            <span>
+                                <span class="account-user-name">{{user}}</span>
+                                <span class="account-position">Founder</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown" aria-labelledby="topbar-userdrop">
+                            <!-- item-->
+                            <div class=" dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">Welcome !</h6>
+                            </div>
+    
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="mdi mdi-account-circle me-1"></i>
+                                <span>My Account</span>
+                            </a>
+    
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="mdi mdi-account-edit me-1"></i>
+                                <span>Settings</span>
+                            </a>
+    
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="mdi mdi-lifebuoy me-1"></i>
+                                <span>Support</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="#" onclick="logout()" class="dropdown-item notify-item">
+                                <i class="mdi mdi-lock-outline me-1"></i>
+                                <span>Logout</span>
+                            </a>
+    
+                        </div>
+                    </li>
+
+                </ul>
+                <a class="button-menu-mobile disable-btn">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                
+                <div class="app-search dropdown">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="top-search">
+                            <span class="mdi mdi-magnify search-icon"></span>
+                            <button class="input-group-text btn-primary" type="submit">Search</button>
+                        </div>
+                    </form>
+                    <div class="dropdown-menu dropdown-menu-animated dropdown-lg" id="search-dropdown">
+                        <!-- item-->
+                        <div class="dropdown-header noti-title">
+                            <h5 class="text-overflow mb-2">Found <span class="text-danger">17</span> results</h5>
+                        </div>
+    
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="uil-notes font-16 me-1"></i>
+                            <span>Analytics Report</span>
+                        </a>
+    
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="uil-life-ring font-16 me-1"></i>
+                            <span>How can I help you?</span>
+                        </a>
+    
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="uil-cog font-16 me-1"></i>
+                            <span>User profile settings</span>
+                        </a>
+    
+                        <!-- item-->
+                        <div class="dropdown-header noti-title">
+                            <h6 class="text-overflow mb-2 text-uppercase">Users</h6>
+                        </div>
+    
+                        <div class="notification-list">
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="d-flex">
+                                    <div class="w-100">
+                                        <h5 class="m-0 font-14">Erwin Brown</h5>
+                                        <span class="font-12 mb-0">UI Designer</span>
+                                    </div>
+                                </div>
+                            </a>
+    
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="d-flex">
+                                    <img class="d-flex me-2 rounded-circle" src="/images/users/avatar-5.jpg" alt="Generic placeholder image" height="32">
+                                    <div class="w-100">
+                                        <h5 class="m-0 font-14">Jacob Deo</h5>
+                                        <span class="font-12 mb-0">Developer</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!-- end Topbar -->
+        
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            <!-- Begin page -->
+            <div class="wrapper">
+
+                <!-- ========== Left Sidebar Start ========== -->
+                <div class="leftside-menu leftside-menu-detached">
+
+                    <div class="leftbar-user">
+                        <a href="javascript: void(0);">
+                            <img src="{{avatar}}" alt="user-image" height="42" class="rounded-circle shadow-sm">
+                            <span class="leftbar-user-name">{{user}}</span>
+                        </a>
+                    </div>
+
+                    <!--- Sidemenu -->
+                     <ul class="side-nav">
+
+                    <li class="side-nav-title side-nav-item">Navigation</li>
+
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarDashboards" aria-expanded="false"
+                            aria-controls="sidebarDashboards" class="side-nav-link">
+                            <i class="bi-house"></i>
+                            <span class="badge bg-info rounded-pill float-end">4</span>
+                            <span> Dashboards </span>
+                        </a>
+                        <div class="collapse" id="sidebarDashboards">
+                            <ul class="side-nav-second-level">
+                                <li>
+                                    <a href="/Users?Id=" id="reffer">Users</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <script>
+                            const urlParams = new URLSearchParams(window.location.search);
+                                    const id = urlParams.get('Id')
+
+                                    $('#reffer').attr('href', 'Users?Id=' + id)
+                    </script>
+
+                    <li class="side-nav-title side-nav-item">Apps</li>
+                    <li class="side-nav-item">
+                        <a href="apps-chat.html" class="side-nav-link">
+                            <i class="uil-comments-alt"></i>
+                            <span> Chat </span>
+                        </a>
+                    </li>
+                </ul>
+                    <div class="help-box help-box-light text-center">
+                        <a href="javascript: void(0);" class="float-end close-btn text-body">
+                            <i class="mdi mdi-close"></i>
+                        </a>
+                        <img src="/images/help-icon.svg" height="90" alt="Helper Icon Image" />
+                        <h5 class="mt-3">Unlimited Access</h5>
+                        <p class="mb-3">Upgrade to plan to get access to unlimited reports</p>
+                        <a href="javascript: void(0);" class="btn btn-outline-primary btn-sm">Upgrade</a>
+                    </div>          
+                    <div class="clearfix"></div>
+                    <!-- Sidebar -left -->
+
+                </div>
+                <!-- Left Sidebar End -->
+
+                <div class="content-page">
+                    <div class="content">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <form class="d-flex">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control form-control-light" id="dash-daterange">
+                                                <span class="input-group-text bg-primary border-primary text-white">
+                                                    <i class="bi-calendar xsr"></i>
+                                                </span>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                    <h4 class="page-title">Analytics</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-4">
+                                <div class="card tilebox-one">
+                                    <div class="card-body">
+                                        <i class='uil uil-users-alt float-end'></i>
+                                        <h6 class="text-uppercase mt-0">Active Users</h6>
+                                        <h2 class="my-2" id="active-users-count">0</h2>
+                                        <p class="mb-0 text-muted">
+                                            <span class="text-success me-2"><span class="mdi mdi-arrow-up-bold"></span> 5.27%</span>
+                                            <span class="text-nowrap">Since last month</span>  
+                                        </p>
+                                    </div> <!-- end card-body-->
+                                </div>
+                                <!--end card-->
+
+                                <div class="card tilebox-one">
+                                    <div class="card-body">
+                                        <i class='bi-patch-check'></i>
+                                        <h6 class="text-uppercase mt-0">Views per minute</h6>
+                                        <h2 class="my-2" id="active-views-count">0</h2>
+                                        <p class="mb-0 text-muted">
+                                            <span class="text-danger me-2"><span class="mdi mdi-arrow-down-bold"></span> 1.08%</span>
+                                            <span class="text-nowrap">Since previous week</span>
+                                        </p>
+                                    </div> <!-- end card-body-->
+                                </div>
+                                <!--end card-->
+
+                                <div class="card cta-box overflow-hidden">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h3 class="m-0 fw-normal cta-box-title" id="qouteHolder">Enhance your <b>Campaign</b> for better outreach <i class="mdi mdi-arrow-right"></i></h3>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                    <!-- end card-body -->
+                                </div>
+                            </div> <!-- end col -->
+
+                            <script>
+                                const quotes = ["Focus on being productive instead of busy.", "You can fool everyone else, but you can’t fool your own mind.", "Simplicity boils down to two steps: Identify the essential. Eliminate the rest.", "Strive not to be a success, but rather to be of value.", "If you spend too much time thinking about a thing, you’ll never get it done."]
+                                const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+                                $('#qouteHolder').html(randomQuote)
+
+
+                            </script>
+                            
+
+                            <div class="col-xl-9 col-lg-8">
+                                <div class="card card-h-100">
+
+
+                                <div class="card-body">
+                                    <div class="alert alert-warning alert-dismissible fade show mb-3" role="alert">
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        Connection to your game not established.
+                                    </div>
+
+                                    <h4 class="header-title mb-3">Game Visits</h4>
+
+                                    <div dir="ltr">
+                                        <div id="sessions-overview" class="apex-charts mt-3" data-colors="#0acf97" style="min-height: 309px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+<script>
+            var e = new Date,
+            t = function(e, t) {
+                for (var a = new Date(t, e, 1), o = [], r = 0; a.getMonth() === e && r < 15;) {
+                    var s = new Date(a);
+                    o.push(s.getDate() + " " + s.toLocaleString("en-us", {
+                        month: "short"
+                    })), a.setDate(a.getDate() + 1), r += 1
+                }
+                return o
+            }(e.getMonth() + 1, e.getFullYear()),
+            a = ["#727cf5", "#0acf97", "#fa5c7c", "#ffbc00"],
+            o = $("#sessions-overview").data("colors");
+        o && (a = o.split(","));
+
+            var r = {
+            chart: {
+                heght: 209,
+                type: "area"
+            },
+            dataLabels: {
+                enabled: !1
+            },
+            stroke: {
+                curve: "smooth",
+                width: 4
+            },
+            series: [{
+                name: "Visits",
+                data: [0, 0, 0, 0, 0, 10, 50, 10]
+            }],
+            zoom: {
+                enabled: !0
+            },
+            legend: {
+                show: !0
+            },
+            colors: a,
+            xaxis: {
+                type: "string",
+                categories: t,
+                tooltip: {
+                    enabled: !1
+                },
+                axisBorder: {
+                    show: !1
+                },
+                labels: {}
+            },
+            yaxis: {
+                labels: {
+                    offsetX: -15
+                }
+            },
+            fill: {
+                type: "gradient",
+                gradient: {
+                    type: "vertical",
+                    shadeIntensity: 1,
+                    inverseColors: !1,
+                    opacityFrom: .45,
+                    opacityTo: .05,
+                    stops: [45, 100]
+                }
+            }
+        };
+        new ApexCharts(document.querySelector("#sessions-overview"), r).render();
+</script>
+                        
+ 
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="dropdown float-end">
+                                            <a href="#" class="dropdown-toggle arrow-none card-drop p-0"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a href="javascript:void(0);" class="dropdown-item">Refresh Report</a>
+                                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                            </div>
+                                        </div>
+                                        <h4 class="header-title">Views Per Minute</h4>
+
+                                        <div id="views-min" class="apex-charts mt-2" data-colors="#10c469"></div>
+
+                                        <div class="table-responsive mt-3">
+                                            <table class="table table-sm mb-0 font-13">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Page</th>
+                                                        <th>Views</th>
+                                                        <th>Bounce Rate</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="text-muted">/hyper/dashboard-analytics</a>
+                                                        </td>
+                                                        <td>25</td>
+                                                        <td>87.5%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="text-muted">/hyper/dashboard-crm</a>
+                                                        </td>
+                                                        <td>15</td>
+                                                        <td>21.48%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="text-muted">/ubold/dashboard</a>
+                                                        </td>
+                                                        <td>10</td>
+                                                        <td>63.59%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="text-muted">/minton/home</a>
+                                                        </td>
+                                                        <td>7</td>
+                                                        <td>56.12%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+                            </div> <!-- end col-->
+
+                            <div class="col-xl-4 col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="dropdown float-end">
+                                            <a href="#" class="dropdown-toggle arrow-none card-drop p-0"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a href="javascript:void(0);" class="dropdown-item">Refresh Report</a>
+                                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                            </div>
+                                        </div>
+                                        <h4 class="header-title">Sessions by Browser</h4>
+
+                                        <div id="sessions-browser" class="apex-charts mt-3" data-colors="#35b8e0"></div>
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+                            </div> <!-- end col-->
+
+                            <div class="col-xl-4 col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="dropdown float-end">
+                                            <a href="#" class="dropdown-toggle arrow-none card-drop p-0"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a href="javascript:void(0);" class="dropdown-item">Refresh Report</a>
+                                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                            </div>
+                                        </div>
+                                        <h4 class="header-title">Sessions by Operating System</h4>
+
+                                        <div id="sessions-os" class="apex-charts mt-3" data-colors="#536de6,#10c469,#ff5b5b,#f9c851"></div>
+
+                                        <div class="row text-center mt-2">
+                                            <div class="col-6">
+                                                <h4 class="fw-normal">
+                                                    <span>6,510</span>
+                                                </h4>
+                                                <p class="text-muted mb-0">Online System</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <h4 class="fw-normal">
+                                                    <span>2,031</span>
+                                                </h4>
+                                                <p class="text-muted mb-0">Offline System</p>
+                                            </div>
+                                        </div>
+
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+                            </div> <!-- end col-->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="" class="p-0 float-end">Export <i class="mdi mdi-download ms-1"></i></a>
+                                        <h4 class="header-title mt-1 mb-3">Channels</h4>
+
+                                        <div class="table-responsive">
+                                            <table class="table table-sm table-centered mb-0 font-14">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>Channel</th>
+                                                        <th>Visits</th>
+                                                        <th style="width: 40%;"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Direct</td>
+                                                        <td>2,050</td>
+                                                        <td>
+                                                            <div class="progress" style="height: 3px;">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                    style="width: 65%; height: 20px;" aria-valuenow="65"
+                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Organic Search</td>
+                                                        <td>1,405</td>
+                                                        <td>
+                                                            <div class="progress" style="height: 3px;">
+                                                                <div class="progress-bar bg-info" role="progressbar"
+                                                                    style="width: 45%; height: 20px;" aria-valuenow="45"
+                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Refferal</td>
+                                                        <td>750</td>
+                                                        <td>
+                                                            <div class="progress" style="height: 3px;">
+                                                                <div class="progress-bar bg-warning" role="progressbar"
+                                                                    style="width: 30%; height: 20px;" aria-valuenow="30"
+                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Social</td>
+                                                        <td>540</td>
+                                                        <td>
+                                                            <div class="progress" style="height: 3px;">
+                                                                <div class="progress-bar bg-danger" role="progressbar"
+                                                                    style="width: 25%; height: 20px;" aria-valuenow="25"
+                                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div> <!-- end table-responsive-->
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+                            </div> <!-- end col-->
+
+
+                            <div class="col-xl-4 col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="" class="p-0 float-end">Export <i class="mdi mdi-download ms-1"></i></a>
+                                        <h4 class="header-title mt-1 mb-3">Engagement Overview</h4>
+
+                                        <div class="table-responsive">
+                                            <table class="table table-sm table-centered mb-0 font-14">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>Duration (Secs)</th>
+                                                        <th style="width: 30%;">Sessions</th>
+                                                        <th style="width: 30%;">Views</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>0-30</td>
+                                                        <td>2,250</td>
+                                                        <td>4,250</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>31-60</td>
+                                                        <td>1,501</td>
+                                                        <td>2,050</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>61-120</td>
+                                                        <td>750</td>
+                                                        <td>1,600</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>121-240</td>
+                                                        <td>540</td>
+                                                        <td>1,040</td>  
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div> <!-- end table-responsive-->
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+                            </div> <!-- end col-->
+
+                        </div>
+                        <!-- end row -->
+                        
+                    </div> <!-- End Content -->
+
+                    <!-- Footer Start -->
+                    <footer class="footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <script>document.write(new Date().getFullYear())</script> ©Hidd3n
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- end Footer -->
+
+                </div> <!-- content-page -->
+
+            </div> <!-- end wrapper-->
+        </div>
+        <!-- END Container -->
+
+
+        <!-- Right Sidebar -->
+      
+
+        <script>
+            //id url param
+            var urlParams = new URLSearchParams(window.location.search);
+            var id = urlParams.get('Id');
+            console.log(id)
+
+            //set href to id
+            $('.user-href').attr('href', 'users?Id='+id);
+
+
+
+
+        </script>
+
+
+        <script src="/js/app.min.js"></script>
+        <script src="/js/custom.js"></script>
+        <script src="/js/dash.min.js"></script>
+
+        
+
+    </body>
+</html>

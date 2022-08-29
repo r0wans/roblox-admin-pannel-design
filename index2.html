@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Hidd3n | Admin Pannel</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/1.2.2/jquery-jvectormap.css" rel="stylesheet"
+        type="text/css" />
+        <!-- App css -->
+        <link href="./css/app.min.css" rel="stylesheet" type="text/css" id="light-style" />      
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    </head>
+
+    <body class="" data-layout-config='{"darkMode":false}'>
+
+        <!-- NAVBAR START -->
+        <nav class="navbar navbar-expand-lg py-lg-3 navbar-dark">
+            <div class="container">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi-list"></i>
+                </button>
+
+                <!-- menus -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                    <!-- left menu -->
+                    <ul class="navbar-nav me-auto align-items-center">
+                        <li class="nav-item mx-lg-1">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item mx-lg-1">
+                            <a class="nav-link" href="#Features">Features</a>
+                        </li>
+                        <li class="nav-item mx-lg-1">
+                            <a class="nav-link" href="#Pricing">Pricing</a>
+                        </li>
+                        <li class="nav-item mx-lg-1">
+                            <a class="nav-link" href="#FAQs">FAQs</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- right menu -->
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item me-0">
+                            <a href="/auth" target="_self" class="nav-link d-lg-none">{{strin}}</a>
+                            <a href="/auth" target="_self" class="btn btn-sm btn-light rounded-pill d-none d-lg-inline-flex">
+                                <i class="xsr mdi {{icon}} me-2"></i> {{strin}}
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <!-- NAVBAR END -->
+
+        <!-- START HERO -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <div class="mt-md-4">
+                            <h2 class="text-white fw-normal mb-4 mt-3 hero-title">
+                                <span class="text-danger">Hidd3n</span> Game management
+                            </h2>
+
+                            <p class="mb-4 font-16 text-white-50">Hidd3n is a powerfull tool to easily connect your roblox game to a modern admin dashboard.</p>
+
+                            <a target="_self" class="btn btn-success" id="toastmessage">Preview <i
+                                    class="bi-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-5 offset-md-2">
+                        <div class="text-md-end mt-3 mt-md-0">
+                            <img src="/images/startup.svg" alt="" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END HERO -->
+
+        <!-- START SERVICES -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row py-4">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <h1 class="mt-0"><i class="mdi mdi-infinity" id="Features"></i></h1>
+                            <h3>Hidd3n pannel allows <span class="text-primary">fast</span> and <span
+                                    class="text-primary">secure</span> game connections. </h3>
+                            <p class="text-muted mt-2">Hidd3n </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="text-center p-2 p-sm-3">
+                            <div class="avatar-sm m-auto">
+                                <span class="avatar-title bg-primary-lighten rounded-circle">
+                                    <i class="xsr text-primary font-24 bi-emoji-sunglasses-fill"></i>
+                                </span>
+                            </div>
+                            <h4 class="mt-3">Easy To use</h4>
+                            <p class="text-muted mt-2 mb-0">Our application is easy to use and easy to understand.
+                                You can easily connect your game to our application.</p>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="text-center p-2 p-sm-3">
+                            <div class="avatar-sm m-auto">
+                                <span class="avatar-title bg-primary-lighten rounded-circle">
+                                    <i class="xsr text-primary font-24 bi-lightning-fill"></i>
+                                </span>
+                            </div>
+                            <h4 class="mt-3">Speed</h4>
+                            <p class="text-muted mt-2 mb-0">Our server is always online and ready to serve you. Using a AMD EPYC we always provide the best performance.
+                            </p>
+                        </div>
+                    </div>
+
+                   <div class="col-lg-4 col-md-6">
+                        <div class="text-center p-2 p-sm-3">
+                            <div class="avatar-sm m-auto">
+                                <span class="avatar-title bg-primary-lighten rounded-circle">
+                                    <i class="xsr text-primary font-24 bi-discord"></i>
+                                </span>
+                            </div>
+                            <h4 class="mt-3">Good Support</h4>
+                            <p class="text-muted mt-2 mb-0">We have a good support team to help you with any
+                                issues you may have. We are always ready to help you. 
+                            </p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+  
+
+        <!-- START FEATURES 2 -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <h1 class="mt-0"><i class="mdi mdi-heart-multiple-outline"></i></h1>
+                            <h3>Features you'll <span class="text-danger">love</span></h3>
+                            <p class="text-muted mt-2">Hidd3n provides a lot of features to easily manage your experience
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2 py-5 align-items-center">
+                    <div class="col-lg-5 col-md-6">
+                        <img src="/images/features-1.svg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 offset-md-1 col-md-5">
+                        <h3 class="fw-normal">Inbuilt applications and pages</h3>
+                        <p class="text-muted mt-3">Hidd3n comes with a lot of features to monitorize your game.</p>
+
+                        <div class="mt-4">
+                            <p class="text-muted"><i class="mdi mdi-circle-medium text-primary"></i> Game Analytics</p>
+                            <p class="text-muted"><i class="mdi mdi-circle-medium text-primary"></i> User Management</p>
+                            <p class="text-muted"><i class="mdi mdi-circle-medium text-primary"></i> Game Insights</p>
+                            <p class="text-muted"><i class="mdi mdi-circle-medium text-primary"></i> Real Time Fetching</p>
+                        </div>
+
+                        <a href="" class="btn btn-primary rounded-pill mt-3">Read More <i class="mdi mdi-arrow-right ms-1"></i></a>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- END FEATURES 2 -->
+
+        <!-- START PRICING -->
+        <section class="py-5 bg-light-lighten border-top border-bottom border-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <h1 class="mt-0"><i class="mdi mdi-tag-multiple" id="Pricing"></i></h1>
+                            <h3>Choose Simple <span class="text-primary">Pricing</span></h3>
+                            <p class="text-muted mt-2">The clean and well commented code allows easy customization of the
+                                theme.It's designed for
+                                <br>describing your app, agency or business.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5 pt-3">
+                    <div class="col-md-4">
+                        <div class="card card-pricing">
+                            <div class="card-body text-center">
+                                <p class="card-pricing-plan-name fw-bold text-uppercase">Regular Subscription </p>
+                                <i class="card-pricing-icon bi-person-fill text-primary"></i>
+                                <h2 class="card-pricing-price">$0 <span>/ Month</span></h2>
+                                <ul class="card-pricing-features">
+                                    <li><span class="text-primary">Regular </span> Unlocked</li>
+                                    <li>Basic analytics unlocked</li>
+                                    <li>1 API connections</li>
+                                    <li>Discord Support</li>
+                                    <li>24/7 Support</li>
+                                </ul>
+                                <a href="/auth">
+                                <button class="btn btn-primary mt-4 mb-2 rounded-pill">Choose Plan</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end Pricing_card -->
+                    </div>
+                    <!-- end col -->
+
+                    <div class="col-md-4">
+                        <div class="card card-pricing card-pricing-recommended">
+                            <div class="card-body text-center">
+                                <div class="card-pricing-plan-tag">Recommended</div>
+                                <p class="card-pricing-plan-name fw-bold text-uppercase">Premium Subscription</p>
+                                <i class="xsr card-pricing-icon bi-file-earmark-person-fill text-primary"></i>
+                                <h2 class="card-pricing-price">$10 <span>/ Month</span></h2>
+                                <ul class="card-pricing-features">
+                                    <li><span class="text-primary">Premium</span> Unlocked</li>
+                                    <li>All analytics unlocked</li>
+                                    <li>Discord Role</li>
+                                    <li>5 API connections</li>
+                                    <li>Discord Support</li>
+                                    <li>24/7 Support</li>
+                                </ul>
+                                <a href="/auth">
+                                <button class="btn btn-primary mt-4 mb-2 rounded-pill">Choose Plan</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end Pricing_card -->
+                    </div>
+                    <!-- end col -->
+
+                    <div class="col-md-4">
+                        <div class="card card-pricing">
+                            <div class="card-body text-center">
+                                <p class="card-pricing-plan-name fw-bold text-uppercase">Life-time</p>
+                                <i class="xsr card-pricing-icon bi-lightning-fill text-primary"></i>
+                                <h2 class="card-pricing-price">$200</h2>
+                                <ul class="card-pricing-features">
+                                    <li><span class="text-primary">Vip</span> Unlocked</li>
+                                    <li>Extra Analytics</li>
+                                    <li>Higher Rank In Discord Server</li>
+                                    <li>Unlimited Api Connections</li>
+                                    <li>Connect to Discord</li>
+                                    <li>Premium Support</li>
+                                    <li>And much more</li>
+
+
+                                </ul>
+                                <a href="/auth">
+                                <button class="btn btn-primary mt-4 mb-2 rounded-pill">Choose Plan</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end Pricing_card -->
+                    </div>
+                    <!-- end col -->
+
+                </div>
+
+            </div>
+        </section>
+        <!-- END PRICING -->
+
+        <!-- START FAQ -->
+        <section class="py-5 bg-light-lighten border-top border-bottom border-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <h1 class="mt-0"><i class="xsr mdi bi-patch-question-fill"></i></h1>
+                            <h3 id="FAQs">Frequently Asked <span class="text-primary">Questions</span></h3>
+                            <p class="text-muted mt-2">Here are some of the basic types of questions for our customers. For more 
+                                <br>information please contact us.</p>
+                            <a href="https://discord.gg/WMKC2c97wy">
+                           <button type="button" class="btn btn-discord btn-sm mt-2"><i class="mdi bi-discord me-1"></i> Ask us more questions</button>
+                            </a>
+              </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-lg-5 offset-lg-1">
+                        <!-- Question/Answer -->
+                        <div>
+                            <div class="faq-question-q-box">Q.</div>
+                            <h4 class="faq-question text-body">Do i need to enable HTTP requests?</h4>
+                            <p class="faq-answer mb-4 pb-1 text-muted">Yup, HTTP service are needed in order to make the communication between your game and the pannel work.</p>
+                        </div>
+
+                        <!-- Question/Answer -->
+                        <div>
+                            <div class="faq-question-q-box">Q.</div>
+                            <h4 class="faq-question text-body">How do I get help with setting up the pannel?</h4>
+                            <p class="faq-answer mb-4 pb-1 text-muted">Just use the channel in our <a href="https://discord.gg/WMKC2c97wy">discord server</a>. We are here to help anytime.</p>
+                        </div>
+
+                    </div>
+                    <!--/col-lg-5 -->
+
+                    <div class="col-lg-5">
+                        <!-- Question/Answer -->
+                        <div>
+                            <div class="faq-question-q-box">Q.</div>
+                            <h4 class="faq-question text-body">Do you also refund the money?</h4>
+                            <p class="faq-answer mb-4 pb-1 text-muted">No once bought, the transaction cant be refounded anymore. </p>
+                        </div>
+
+                        <!-- Question/Answer -->
+                        <div>
+                            <div class="faq-question-q-box">Q.</div>
+                            <h4 class="faq-question text-body">Will you regularly update the pannel, and add more features?</h4>
+                            <p class="faq-answer mb-4 pb-1 text-muted">Yes, We will update the pannel regularly. All the
+                                future updates would be available without any cost.</p>
+                        </div>
+
+                    </div>
+                    <!--/col-lg-5-->
+                </div>
+                <!-- end row -->
+
+            </div> <!-- end container-->
+        </section>
+        <!-- END FAQ -->
+
+        
+        
+        <!-- START FOOTER -->
+        <footer class="bg-light py-1">
+            <div class="container">
+
+                <div class="row">
+                     <p class="text-muted mt-1 text-center mb-0">©2022 Hidd3n</p>
+                </div>
+            </div>
+        </footer>
+        <!-- END FOOTER -->
+
+        <!-- bundle -->
+        <script src="/js/demo.toastr.js"></script>
+        <script src="/js/vendor.min.js"></script>
+        <script src="/js/app.min.js"></script>
+
+    </body>
+
+</html>
